@@ -1,0 +1,51 @@
+.landingProduct{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &__img{
+   // width: 100%;
+   height: 30rem;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top:50%;
+   left:50%;
+   transition: all .3s;
+  }
+  &__btn{
+   z-index: 1;
+   // height: 100%;
+   // display: none;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top:100%;
+   left:50%;
+   padding: 1rem 3rem;
+   display:flex;
+   justify-content:center;
+   align-items: center;
+   font-size: 1.5rem;
+   background:$color-pen-primary;
+   border: none;
+   color: $color-pen-special;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: all .5s;
+   opacity: 0;
+   &:hover{
+      background:rgba($color-pen-secondary,1);
+      box-shadow: 0 0 1rem $color-pen-secondary,0 0 2rem $color-pen-secondary,0 0 2rem $color-pen-secondary;
+   }
+   &:focus{
+      outline: none;
+   }
+  }
+  &:hover > button{
+    top:50%;
+    opacity: 1;
+  }
+  &:hover > img{
+     filter: blur(1px);
+     opacity: .5;
+     background: $color-white;
+  }
+}

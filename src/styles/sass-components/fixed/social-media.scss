@@ -1,0 +1,35 @@
+.socialMedia{
+  display: none;
+  position: fixed;
+  top:30vh;
+  left: 0;
+  z-index: 10000;
+  &__item{
+    font-size: 2rem;
+    background: $color-pen-primary;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    transition: all .2s;
+    &:hover{
+      text-decoration:none;
+      background: $color-pen-primary;
+    }
+    & > *{
+      color: $color-white;
+
+    }
+  }
+  &__facebook{
+     background: #4267B2;
+  }
+  &__instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  }
+  &__youtube{
+    background: $color-red;
+  }
+}

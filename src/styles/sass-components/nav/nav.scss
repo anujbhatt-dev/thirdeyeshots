@@ -1,0 +1,56 @@
+.nav{
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content:space-between;
+  align-self: center;
+  padding: 0rem 10rem;
+  font-size: 2rem;
+  color:$color-black;
+  background: $color-pen-primary;
+  transition: all .5s;
+  &__brand{
+    font-family: 'Rock Salt', cursive;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: .5rem;
+    font-size: 5rem;
+    color: $color-black;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--penizgun_logo{
+      height: 4rem;
+
+    }
+  }
+  &__list{
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    &_item{
+        padding: 0 1rem;
+        margin: 0 1rem;
+        color: $color-black;
+        transition: all .2s;
+        perspective: 1000px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+        &:hover{
+          color: $color-pen-primary;
+          transform-origin: center;
+          text-decoration: none;
+          // letter-spacing: 2px;
+        }
+    }
+  }
+  @include respond(tab-port){
+    display: none;
+  }
+}
+.nav__list_item:hover{
+  transform: scale(1.2);
+}

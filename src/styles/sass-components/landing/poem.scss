@@ -1,0 +1,38 @@
+&__poem{
+  width: 50%;
+  &_title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color:transparent;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right bottom,$color-pen-primary,$color-gig-primary);
+    background-clip: text;
+    padding-bottom: 1rem;
+  }
+  &_lines{
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    line-height: 1.5;
+    width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    color:$color-grey;
+    font-style: italic;
+    font-family: "kalam",sans-serif;
+  }
+  &_by{
+    color:$color-grey;
+    font-size: 1.2rem;
+    width: 40rem;
+    text-align: right;
+    margin: 0 auto;
+    & strong{
+      color:$color-black;
+      letter-spacing: 1px;
+    }
+  }
+}

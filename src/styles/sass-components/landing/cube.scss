@@ -1,0 +1,55 @@
+&__cube{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1500px;
+  width: 100%;
+  &_area{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: preserve3d 30s linear infinite;
+    &-box{
+      position:absolute;
+      height: 40rem;
+      width: 40rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: $color-white;
+      & img{
+        // height: 50%;
+        // height: 50%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100px;
+      }
+    }
+    &-front{
+        transform: translate(-20rem,-20rem) translateZ(20rem);
+        background: rgba($color-pen-primary,.5);
+    }
+    &-right{
+      transform: translateY(-20rem) translateZ(0rem) rotateY(90deg);
+      background: rgba($color-pen-secondary,.5);
+    }
+    &-back{
+      transform: translate(-20rem,-20rem) translateZ(-20rem) rotateY(180deg);
+      background: rgba($color-pen-primary,.5);
+    }
+    &-left{
+      transform: translateY(-20rem) translateX(-40rem) rotateY(-90deg);
+      background: rgba($color-pen-secondary,.5);
+    }
+    &-top{
+      transform: translateX(-20rem) translateY(-40rem) rotateX(90deg);
+      background: rgba($color-gig-primary,.5);
+    }
+    &-bottom{
+      transform: translateX(-20rem) rotateX(90deg);
+      background: rgba($color-gig-primary,.5);
+      // box-shadow: 0 0 5rem rgba($color-black,.5)
+    }
+  }
+}

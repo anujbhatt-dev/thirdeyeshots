@@ -1,0 +1,12 @@
+.landing{
+  margin: auto;
+  padding: 0;
+  margin: 0;
+
+  @import "./first-view";
+  @import "./double-image";
+  @import "./poem";
+  @import "./cube";
+  @import "./social-media";
+}
+@import "./product";

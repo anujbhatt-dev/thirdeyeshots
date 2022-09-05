@@ -1,0 +1,23 @@
+.contact{
+  height: 100vh;
+  position: relative;
+   // z-index: 1;
+   margin-top: 6rem;
+   @include respond(tab-port){
+      margin-top: 0rem;
+   }
+  & video{
+    background: rgba($color-pen-secondary,.9);
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+  }
+  &--contact{
+    // margin-bottom: 5rem;
+  }
+}

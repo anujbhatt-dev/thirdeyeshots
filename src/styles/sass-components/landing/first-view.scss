@@ -1,0 +1,109 @@
+&__firstView{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: $color-white;
+  position: relative;
+  &_col1{
+    display:flex;
+    justify-content:center;
+    // align-items: center;
+    flex-flow: column;
+    width: 50%;
+    padding-left: 10rem;
+    &-head{
+      // text-align: center;
+      font-size: 3rem;
+      line-height: 2;
+      margin-bottom: 5rem;
+      font-weight: lighter;
+      letter-spacing: 2px;
+      word-spacing: .5rem;
+      text-transform: uppercase;
+      color: $color-black;
+      font-family: "kalam", sans-serif;
+    }
+    &-img{
+      display: none;
+    }
+    &-btn{
+      & button{
+        padding: 2rem 5rem;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        font-size: 2rem;
+        background:$color-pen-primary;
+        border: none;
+        color: $color-pen-special;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .5s;
+        &:hover{
+           background:rgba($color-pen-primary,.5);
+        }
+        &:focus{
+           outline: none;
+        }
+      }
+
+    }
+  }
+
+  &_col2{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+     width: 50%;
+     height: 100vh;
+    &-image{
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+      box-shadow: inset 10rem 10rem 5rem rgba($color-pen-primary,1);
+    }
+  }
+}
+@include respond(tab-port){
+  &__firstView{
+    &_col1{
+      align-items: center;
+      width: 100%;
+      padding-left: 0;
+      &-head{
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 2;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        z-index: 2;
+      }
+      &-img{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+        opacity: .9;
+      }
+      &-btn{
+        z-index: 2;
+        & button{
+          padding: 2rem 4rem;
+          font-size: 2rem;
+        }
+
+      }
+    }
+
+    &_col2{
+      display:none;
+    }
+  }
+}

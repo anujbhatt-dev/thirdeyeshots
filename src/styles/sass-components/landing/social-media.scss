@@ -1,0 +1,110 @@
+&__socialMedia{
+  &_head{
+    padding: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $color-white;
+    background: $color-pen-primary;
+    &--right{
+      text-align: right;
+      clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 52% 50%);
+
+    }
+    &--left{
+      clip-path: polygon(0 0, 50% 0, 48% 50%, 50% 100%, 0 100%);
+    }
+    &--middle{
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 73% 51%, 75% 100%, 25% 100%, 27% 50%);
+    }
+  }
+  &_instagram{
+    position: relative;
+    // height: 100vh;
+    &-circle{
+      margin: 4rem auto;
+      // position: absolute;
+      height: 60rem;
+      width: 60rem;
+      background-image: linear-gradient(to right top,$color-pen-primary,$color-pen-secondary);
+      // outline: 1px solid $color-pen-primary;
+      box-shadow: 0 0 2rem rgba($color-black,.2);
+      border-radius: 50%;
+      // animation: circleGradient 20s linear infinite;
+    }
+    &-img{
+      // width: 35rem;
+      height: 62rem;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      transform:translateX(-50%);
+      left:50%;
+      top: 0;
+    }
+    &-video{
+       margin-top: 15rem;
+       height: 40rem;
+
+    }
+    @import "./instagram-grid";
+  }
+  &_youtube{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-circle{
+
+    }
+    &-iframe{
+      width: 80%;
+      height: 80vh;
+      margin: 4rem auto;
+    }
+  }
+  &_icons{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+
+    & div{
+      position: absolute;
+      z-index: -1;
+      height:70rem;
+      width:70rem;
+      left: 0;
+      transform: translateX(-70%);
+
+    }
+    & > a > i{
+       color: transparent;
+       font-size: 18rem;
+       background-image: linear-gradient(to left top,$color-pen-secondary 10%,$color-pen-primary 100%);
+       background-clip: text;
+    }
+    & > a{
+      & > .fa-instagram{
+        &:hover{
+          background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
+      }
+      & > .fa-youtube{
+        &:hover{
+            background-image: linear-gradient(to left top,$color-red 10%,$color-red 100%);
+        }
+      }
+      & > .fa-facebook{
+
+        &:hover{
+            background-image: linear-gradient(to left top,  #4267B2 10%,  #4267B2 100%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.about{
+   margin: 0 10rem;
+   // width: 100vw;
+   margin-top: 7rem;
+
+   @include respond(tab-port){
+     margin: 0 2rem;
+   }
+
+  &_row{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    // padding: 5rem 0;
+    width: 100%;
+    @include respond(tab-port){
+      flex-flow: column;
+      &-even{
+        flex-flow: column-reverse;
+      }
+    }
+    &-col1{
+       width:50%;
+       line-height: 1.5;
+       font-size: 2rem;
+       word-spacing: 3px;
+       @include respond(tab-port){
+         width: 100%
+       }
+    }
+    &-col2{
+       width:50%;
+       height: 80vh;
+       display:flex;
+       justify-content:center;
+       align-items: center;
+       object-fit: cover;
+       object-position: center;
+       @include respond(tab-port){
+         width: 100%;
+         height:auto;
+       }
+       &-image{
+           box-shadow: inset 2rem 0rem 15rem $color-white;
+           height: 100%;
+           width: 100%;
+           padding: 3rem;
+           // @include respond(tab-port){
+           // }
+       }
+    }
+  }
+}

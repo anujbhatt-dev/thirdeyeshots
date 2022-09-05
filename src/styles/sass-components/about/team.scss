@@ -1,0 +1,65 @@
+.team{
+  &_row{
+    padding: 3rem 0;
+    padding-bottom: 10rem;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    & figure{
+       margin: 2rem 15rem;
+       overflow: hidden;
+       position: relative;
+       height: 30rem;
+       width: 30rem;
+       border-radius: 5px;
+       animation: clippy 10s linear infinite;
+       animation-fill-mode: forwards;
+       transition: all .8s;
+       background: $color-black;
+       box-shadow: 0rem 0rem 1rem rgba($color-black,.5);
+      & img{
+        transition: all .8s;
+       position: absolute;
+       display:flex;
+       justify-content:center;
+       align-items: center;
+       height: 100%;
+       width: 100%;
+       z-index: 1;
+      }
+      & figcaption{
+        transition: all .2s;
+        height: 100%;
+        width: 100%;
+        color: $color-pen-special;
+        position: absolute;
+        display:flex;
+        flex-flow: column;
+        justify-content:center;
+        align-items: center;
+        z-index: 2;
+        opacity:0;
+        transform: translateY(200%);
+        // color: $color-black;
+         & h6{
+
+           font-size: 2.5rem;
+         }
+         & p{
+           font-size: 1.8rem;
+           color: $color-pen-special;
+         }
+      }
+      &:hover > img{
+        filter: blur(5px);
+        opacity: .9;
+      }
+      &:hover > figcaption{
+        transform: translateY(0%);
+        opacity:1;
+      }
+    }
+
+  }
+}

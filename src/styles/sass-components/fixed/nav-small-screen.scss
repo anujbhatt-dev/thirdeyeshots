@@ -1,0 +1,89 @@
+.navSmallScreen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width:100vw;
+  background-image: radial-gradient($color-pen-primary,$color-gig-primary);
+  display: none;
+  justify-content:center;
+  align-items: center;
+  flex-flow: column;
+  z-index: 1000;
+  animation: nav .5s linear;
+  &__house{
+     animation: navItem 1.1s linear;
+     z-index: 1005;
+  }
+  &__shop{
+     animation: navItem 1s linear;
+     z-index: 1004;
+  }
+  &__readingSection{
+     animation: navItem .8s linear;
+     z-index: 1003;
+  }
+  &__travel{
+     animation: navItem .6s linear;
+     z-index: 1002;
+  }
+  &__about{
+     animation: navItem .4s linear;
+     z-index: 1001;
+  }
+  &__contact{
+     animation: navItem .2s linear;
+     z-index: 1000;
+  }
+  &__item{
+    padding: 2rem 5rem;
+    // box-shadow: 0 5rem 5rem $color-black;
+    color:$color-white;
+    border: 1px solid rgba($color-white,.1);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    min-width: 30rem;
+    text-align: center;
+    transition: all .2s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    transform: translateY(-100vh);
+    &:focus{
+      outline: none;
+    }
+    &:hover{
+      background: $color-white;
+      color: $color-pen-primary;
+      text-decoration: none;
+    }
+  }
+  &__toggler{
+    position: fixed;
+    top:1rem;
+    left: 1rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100px;
+    display: flex;
+    color: $color-white;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    background: $color-pen-primary;
+    z-index: 100000;
+    & .fa-times{
+      animation: navToggle .5s ease-out;
+    }
+    & .fa-bars{
+      animation: navToggle-reverse .5s ease-out;
+    }
+    display: none;
+    @include respond(phone){
+      display: flex;
+    }
+  }
+  @include respond(phone){
+    display: flex;
+  }
+}

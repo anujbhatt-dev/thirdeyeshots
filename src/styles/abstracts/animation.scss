@@ -1,0 +1,96 @@
+@keyframes clippy {
+    0%{
+       clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    25%{
+       clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 24%);
+    }
+    50%{
+       clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    75%{
+      clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 24%);
+    }
+    100%{
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+}
+
+// @keyframes circleGradient {
+//     0%{
+//        transform: rotate(0);
+//     }
+//     100%{
+//        transform: rotate(360deg);
+//     }
+// }
+
+
+@keyframes navToggle {
+    0%{
+       transform: rotate(0);
+    }
+    50%{
+       transform: rotate(180deg);
+    }
+    100%{
+       transform: rotate(360deg);
+    }
+}
+
+
+@keyframes navToggle-reverse {
+    0%{
+       transform: rotate(360deg);
+    }
+    50%{
+       transform: rotate(180deg);
+    }
+    100%{
+       transform: rotate(00deg);
+    }
+}
+
+
+@keyframes nav {
+  0%{
+    left:-100vw;
+  }
+  25%{
+    left:20vw;
+  }
+  50%{
+    left:-20vw;
+  }
+  75%{
+    left:20vw;
+  }
+  100%{
+    left:0vw;
+  }
+}
+
+
+
+@keyframes navItem{
+  0%{
+    transform: translateY(-100vh);
+  }
+  80%{
+    transform: translateY(200%);
+    box-shadow: 0 10rem 10rem rgba($color-black,.9)
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+
+@keyframes preserve3d{
+  0%{
+    transform: rotate3d(0,0,0,0);
+  }
+  100%{
+    transform: rotate3d(0,1,0,360deg);
+  }
+}

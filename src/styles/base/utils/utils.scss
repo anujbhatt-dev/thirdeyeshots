@@ -1,0 +1,17 @@
+.heading{
+
+  &__primary{
+      text-align: center;
+      font-size: 3rem;
+      color:$color-pen-primary;
+      padding: 2rem;
+  }
+}
+.horizontalDots{
+  display: block;
+  justify-content: center;
+  padding: 4rem;
+  font-size: 5rem;
+  color: $color-pen-primary;
+  text-align: center;
+}
